@@ -1,12 +1,13 @@
 # to run this, for mac:
 # export FLASK_APP=hello.py
+from sqlalchemy.orm import Session
 
 # for windows:
 # setx FLASK_APP "hello.py"
 
 # and then for both:
 # flask run
-from flaskapp import app
+from flaskapp import app, engine
 from flask import Flask, request
 from sqlalchemy import select
 from .models import User
@@ -19,5 +20,6 @@ def hello_world():
 def register():
     if request.method == 'POST':
         login_request  = request.json
-        select(User).where(User.name == "spongebob")
-        if login_request['username']
+        with Session(engine) as session:
+            select(User).where(User.name == "spongebob")
+            if login_request['username']

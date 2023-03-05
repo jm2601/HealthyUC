@@ -16,7 +16,7 @@ app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # app.config['SQLALCHEMY_ECHO'] = True
-db = SQLAlchemy(app)
+# db = SQLAlchemy(app)
 # /Users/ryanlee/Desktop/Repos/healthyUC/backend/flaskapp
 engine = create_engine("sqlite:////Users/ryanlee/Desktop/Repos/healthyUC/backend/flaskapp/database.db")
 
