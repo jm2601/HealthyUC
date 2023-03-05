@@ -33,6 +33,7 @@ const LoginScreen = () => {
         <Button
           title="Forgot password?"
           onPress={() => alert("Button tapped")}
+          
         />
         <Button
           title='Register'

@@ -7,9 +7,9 @@ import LoginScreen from './screens/LoginScreen';
 //main function
 export default function App() {
   return (
-    <View style={styles.container}>
+    //<View style={styles.container}>
       <LoginScreen />
-    </View>
+    //</View>
   );
 }
 //styles
