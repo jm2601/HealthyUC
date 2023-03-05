@@ -34,7 +34,7 @@ function MainStackNavigator() {
           name='Detail'
           component={Detail}
           options={({ route }) => ({
-            title: route.params.item.name
+            title: 'Profile'
           })}
         />
         <Stack.Screen

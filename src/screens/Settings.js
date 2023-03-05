@@ -5,11 +5,11 @@ function Settings(props) {
   const { navigation } = props
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Settings</Text>
+      <Text style={styles.text}>meals of the day</Text>
       <TouchableOpacity
         style={styles.buttonContainer}
         onPress={() => navigation.popToTop()}>
-        <Text style={styles.buttonText}>Go to Home</Text>
+        <Text style={styles.buttonText}>Sign Out</Text>
       </TouchableOpacity>
     </View>
   )

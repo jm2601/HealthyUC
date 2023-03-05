@@ -1,32 +1,74 @@
 import React from 'react'
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native'
-
-const character = {
+import { Input, Button } from 'react-native-elements';
+import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+/*const character = {
   name: 'Luke Skywalker',
   home: 'Tatooine',
   species: 'human'
-}
+}*/
 
 function Home(props) {
   const { navigation } = props
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Home Screen</Text>
-      <TouchableOpacity
+    <KeyboardAwareScrollView
+      contentContainerStyle={styles.container}
+      keyboardShouldPersistTaps='handled'
+    >
+      <View style={styles.formContainer}>
+        <Text style={styles.titleLogo}>Welcome to Healthy UC</Text>
+        <Input
+          placeholder='Email'
+          keyboardType='email-address'
+          autoCapitalize='none'
+          autoCorrect={false}
+        />
+        <Input
+          placeholder='Password'
+          secureTextEntry
+          autoCapitalize='none'
+          autoCorrect={false}
+        />
+        <TouchableOpacity
         style={styles.buttonContainer}
-        onPress={() => navigation.navigate('Detail', { item: character })}>
-        <Text style={styles.buttonText}>Who is {character.name}?</Text>
-      </TouchableOpacity>
-    </View>
+        onPress={() => navigation.navigate('Detail')}>
+        <Text style={styles.buttonText}>Login</Text>
+        </TouchableOpacity>
+        <Text style={styles.prompts}>Don't have an account?</Text>
+        <Button
+          title="Forgot password?"
+          onPress={() => alert("a pw reset link was sent to your email")}
+          
+        />
+        <TouchableOpacity
+        style={styles.buttonContainer}
+        onPress={() => navigation.navigate('Settings')}>
+        <Text style={styles.buttonText}>Register</Text>
+        </TouchableOpacity>
+      </View>
+    </KeyboardAwareScrollView>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#ebebeb'
+    alignItems: 'stretch',
+    backgroundColor: 'white'
+  },
+  formContainer: {
+    marginHorizontal: 20,
+    marginTop: 20,
+    marginBottom: 40,
+  },
+  buttonContainer: {
+    marginTop: 20,
+  },
+  titleLogo: {
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    fontSize: 20,
   },
   text: {
     color: '#101010',
@@ -34,10 +76,11 @@ const styles = StyleSheet.create({
     fontWeight: 'bold'
   },
   buttonContainer: {
-    backgroundColor: '#222',
+    backgroundColor: 'black',
     borderRadius: 5,
     padding: 10,
-    margin: 20
+    //margin: 20,
+    marginTop: 20,
   },
   buttonText: {
     fontSize: 20,

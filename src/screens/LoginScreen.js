@@ -29,6 +29,11 @@ const LoginScreen = () => {
           containerStyle={styles.buttonContainer}
           buttonStyle={styles.button}
         />
+        <TouchableOpacity
+        style={styles.buttonContainer}
+        onPress={() => navigation.navigate('Detail')}>
+        <Text style={styles.buttonText}>Login</Text>
+      </TouchableOpacity>
         <Text style={styles.prompts}>Don't have an account?</Text>
         <Button
           title="Forgot password?"
