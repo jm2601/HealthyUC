@@ -8,7 +8,7 @@ const CreateAccount = () => {
 
   const handleCreateAccount = () => {
     // Perform account creation logic here
-    console.log(`Creating account with email: ${email} and password: ${password}`);
+    console.log(`Creating account with name: ${name} email: ${email} and password: ${password}`);
   };
 
   return (
@@ -17,7 +17,7 @@ const CreateAccount = () => {
         style={styles.input}
         placeholder="Name"
         onChangeText={setName}
-        value={email}
+        value={name}
       />
 
       <TextInput

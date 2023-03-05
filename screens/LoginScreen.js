@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { Input, Button } from 'react-native-elements';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 
@@ -11,6 +11,7 @@ const LoginScreen = () => {
       keyboardShouldPersistTaps='handled'
     >
       <View style={styles.formContainer}>
+        <Text style={styles.titleLogo}>Welcome to Healthy UC</Text>
         <Input
           placeholder='Email'
           keyboardType='email-address'
@@ -25,6 +26,12 @@ const LoginScreen = () => {
         />
         <Button
           title='Login'
+          containerStyle={styles.buttonContainer}
+          buttonStyle={styles.button}
+        />
+        <Text style={styles.titleLogo}>Don't have an account?</Text>
+        <Button
+          title='Register'
           containerStyle={styles.buttonContainer}
           buttonStyle={styles.button}
         />
@@ -47,8 +54,12 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   button: {
-    backgroundColor: '#007AFF',
+    backgroundColor: 'green',
   },
+  titleLogo: {
+    textAlign: 'center',
+    textAlignVertical: 'center',
+  }
 });
 
 export default LoginScreen;
