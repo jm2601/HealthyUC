@@ -1,17 +1,5 @@
-from flask import Flask
+# going to import app from __init__.py
+from flaskapp import app
 
-app = Flask(__name__)
-
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
-
-
-# to run this, for mac:
-# export FLASK_APP=hello.py
-
-# for windows:
-# setx FLASK_APP "hello.py"
-
-# and then for both:
-# flask run
+if __name__ == '__main__':
+    app.run(debug=False)
