@@ -9,9 +9,15 @@ function Detail(props) {
     <View style={styles.container}>
       <Text style={styles.text}>Profile</Text>
       <View style={styles.card}>
-        <Text style={styles.cardText}>Body Mass Index: </Text>
-        <Text style={styles.cardText}>Calorie Goal: </Text>
-        <Text style={styles.cardText}>Bulk/Cut/Balanced: </Text>
+      
+        <Text style={styles.cardText}>Name: John Doe</Text>
+        <Text style={styles.cardText}>Age: 21 </Text>
+        <Text style={styles.cardText}>Body Mass Index: ###</Text>
+        <Text style={styles.cardText}>Calorie Goal: 1500 </Text>
+        <Text style={styles.cardText}>Bulk/Cut/Balanced: Cut </Text>
+        <Text style={styles.cardText}>Allergies: Peanuts, Shell Fish</Text>
+        <Text style={styles.cardText}>Diet: Vegan </Text>
+        <Text style={styles.cardText}>Meals Per Day: 3 </Text>
       </View>
       <TouchableOpacity
         style={styles.buttonContainer}
@@ -36,9 +42,9 @@ const styles = StyleSheet.create({
   },
   card: {
     width: 350,
-    height: 100,
+    height: 230,
     borderRadius: 10,
-    backgroundColor: '#101010',
+    backgroundColor: 'navy',
     margin: 10,
     padding: 10,
     alignItems: 'center'

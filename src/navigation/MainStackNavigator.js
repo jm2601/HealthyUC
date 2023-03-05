@@ -16,7 +16,7 @@ function MainStackNavigator() {
         screenOptions={{
           gestureEnabled: true,
           headerStyle: {
-            backgroundColor: '#101010'
+            backgroundColor: 'navy'
           },
           headerTitleStyle: {
             fontWeight: 'bold'
@@ -40,7 +40,7 @@ function MainStackNavigator() {
         <Stack.Screen
           name='Settings'
           component={Settings}
-          options={{ title: 'Settings' }}
+          options={{ title: 'Meals' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
