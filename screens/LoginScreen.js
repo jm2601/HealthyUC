@@ -29,7 +29,11 @@ const LoginScreen = () => {
           containerStyle={styles.buttonContainer}
           buttonStyle={styles.button}
         />
-        <Text style={styles.titleLogo}>Don't have an account?</Text>
+        <Text style={styles.prompts}>Don't have an account?</Text>
+        <Button
+          title="Forgot password?"
+          onPress={() => alert("Button tapped")}
+        />
         <Button
           title='Register'
           containerStyle={styles.buttonContainer}
@@ -57,6 +61,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'green',
   },
   titleLogo: {
+    textAlign: 'center',
+    textAlignVertical: 'center',
+    fontSize: 20,
+  },
+  prompts: {
     textAlign: 'center',
     textAlignVertical: 'center',
   }
