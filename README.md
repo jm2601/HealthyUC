@@ -1,4 +1,4 @@
-# HealthyUC - 1st Place Winner at HackMerced VIII 2023 🎉
+# HealthyUC - 1st Place winner at HackMerced 2023 🎉
 
 Devpost: https://devpost.com/software/healthy-uc     
 Hackathon: https://hackmerced-viii.devpost.com/
