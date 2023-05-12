@@ -8,6 +8,8 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
   species: 'human'
 }*/
 
+/*testing github repo*/
+
 function Home(props) {
   const { navigation } = props
   return (
